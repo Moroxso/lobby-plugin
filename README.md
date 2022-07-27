@@ -15,4 +15,4 @@ Permissions:
 
 In order for the player to use the commands /hub and /lobby give him the following permission:
 
-lobby.perm
+ - lobby.perm
