@@ -16,11 +16,10 @@ public class Lobby extends Command {
     public void execute(CommandSender sender, String[] args) {
         if ((sender instanceof ProxiedPlayer)) {
             String permission = "lobby.perm";
-            ProxiedPlayer p = null;
+            ProxiedPlayer p = (ProxiedPlayer) sender;
             if (sender.hasPermission(permission)) {
                 p.connect(ProxyServer.getInstance().getServerInfo("lobby"));
             } else {
-                p = (ProxiedPlayer) sender;
                 p.sendMessage(new ComponentBuilder("У вас недостаточно прав!").color(ChatColor.RED).create());
             }
         }
